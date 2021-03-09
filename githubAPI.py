@@ -42,9 +42,7 @@ def repositories(id: str):
     for key in repos_commits:
 
         print(f"Repo: {key} Number of commits: {repos_commits[key]}")
-
+    
+    return repos_commits
     
 
-
-
-repositories("markparis1")
