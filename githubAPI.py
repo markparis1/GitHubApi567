@@ -34,16 +34,17 @@ def repositories(id: str):
 
             print("Error could not find github repository")
 
-        else:s
+        else:
 
             github_json_repos = r.json()
             repos_commits[repo] = len(github_json_repos)
         
-    return repos_commits
+    for key in repos_commits:
 
-            
+        print(f"Repo: {key} Number of commits: {repos_commits[key]}")
+
+    
 
 
 
-
-print(repositories("markparis1"))
+repositories("markparis1")
