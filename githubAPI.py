@@ -4,7 +4,7 @@ from typing import Dict
 
 def repositories(id: str):
 
-    repos: [str] = []
+    repos = []
     r = requests.get(f"https://api.github.com/users/{id}/repos")
 
     if not (r.status_code == 200):
