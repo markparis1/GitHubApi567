@@ -6,10 +6,11 @@ class TestRepositories(unittest.TestCase):
 
     
     def test_repositories(self):
-
-        repos = repositories("markparis1")
-        self.assertEqual(len(repos), 6)
-        self.assertTrue(repos["Student-Repository"] == 3)
+        
+        m = Mock()
+        m.repos.return_value = {"GitHubApi567": 16, "HelloWorld": 1, "PokerCalculator": 1, "Student-Repository": 3, "Triangles": 2, "TriangleTests": 8}
+        self.assertEqual(len(m.repos()), 6)
+        self.assertTrue(m.repos()["Student-Repository"] == 3)
         
 
 if __name__ == '__main__':
