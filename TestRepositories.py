@@ -1,5 +1,6 @@
 import unittest
 from githubAPI import repositories
+from unittest.mock import MagicMock as Mock
 
 class TestRepositories(unittest.TestCase):
 
